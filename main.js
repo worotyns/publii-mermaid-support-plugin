@@ -35,10 +35,10 @@ class MermaidSupport {
 
   addMermaidScripts(rendererInstance) {
     return `
-      <script type="module">
-        import mermaid from '${rendererInstance.siteConfig.domain}/media/plugins/mermaidSupport/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true, theme: "${this.config.theme}" });
-      </script>
+    <script src="${rendererInstance.siteConfig.domain}/media/plugins/mermaidSupport/mermaid.min.mjs"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: true, theme: "${this.config.theme}" });
+    </script>
     `;
   }
 }
