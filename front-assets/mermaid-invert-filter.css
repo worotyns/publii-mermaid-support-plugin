@@ -1,9 +1,19 @@
-[data-theme='dark'] .mermaid {
-  filter: invert(0.88);
-}
-
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .mermaid {
-      filter: invert(0.88);
+  .mermaid {
+    color: white;
+    background-color: transparent;
+  }
+
+  .mermaid .actor,
+  .mermaid .label,
+  .mermaid .messageText,
+  .mermaid text {
+    fill: white !important;
+  }
+
+  .mermaid line,
+  .mermaid rect,
+  .mermaid path {
+    stroke: white !important;
   }
 }
