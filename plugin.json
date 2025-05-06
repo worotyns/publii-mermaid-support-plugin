@@ -1,0 +1,54 @@
+{
+  "name": "Mermaid Support",
+  "author": "Mateusz Worotyński",
+  "version": "1.0.0",
+  "description": "Adds Mermaid.js support to render diagrams in posts.",
+  "license": "GPL-3.0",
+	"scope": "site",
+	"minimumPubliiVersion": "0.46.2",
+  "assets": {
+    "front": [
+      "mermaid-invert-filter.css"
+    ]
+	},
+	"config": [
+		{
+			"name": "cssFilter",
+			"label": "CSS Filter",
+			"note": "This option appends css filters for better readibility on dark mode.",
+			"group": "Display options",
+			"value": true,
+			"type": "checkbox"
+		},
+		{
+			"name": "theme",
+			"label": "Theme",
+			"note": "This option enables you to select a color theme for mermaid. ",
+			"group": "Theme configuration",
+			"value": "default",
+			"type": "select",
+			"options": [
+				{
+					"label": "Default",
+					"value": "default"
+				},
+        {
+					"label": "Neutral",
+					"value": "neutral"
+				},
+				{
+					"label": "Dark",
+					"value": "dark"
+				},
+				{
+					"label": "Forest",
+					"value": "forest"
+				},
+				{
+					"label": "Base",
+					"value": "base"
+				}
+			]
+		}
+	]
+}
