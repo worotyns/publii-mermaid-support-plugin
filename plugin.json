@@ -1,8 +1,8 @@
 {
   "name": "Mermaid Support",
   "author": "Mateusz Worotyński <worotyns@icloud.com>",
-  "version": "1.0.2",
-  "description": "Adds Mermaid.js support to render diagrams in posts.",
+  "version": "1.0.3",
+  "description": "Adds mermaid.js support to render diagrams in posts.",
   "license": "GPL-3.0",
 	"scope": "site",
 	"minimumPubliiVersion": "0.46.2",
