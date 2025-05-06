@@ -9,7 +9,7 @@
   "assets": {
     "front": [
       "mermaid-invert-filter.css",
-			"mermaid.min.mjs"
+			"mermaid.min.js"
     ]
 	},
 	"config": [
