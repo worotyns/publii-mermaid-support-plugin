@@ -1,14 +1,15 @@
 {
   "name": "Mermaid Support",
-  "author": "Mateusz Worotyński",
-  "version": "1.0.0",
+  "author": "Mateusz Worotyński <worotyns@icloud.com>",
+  "version": "1.0.1",
   "description": "Adds Mermaid.js support to render diagrams in posts.",
   "license": "GPL-3.0",
 	"scope": "site",
 	"minimumPubliiVersion": "0.46.2",
   "assets": {
     "front": [
-      "mermaid-invert-filter.css"
+      "mermaid-invert-filter.css",
+			"mermaid.esm.min.mjs"
     ]
 	},
 	"config": [

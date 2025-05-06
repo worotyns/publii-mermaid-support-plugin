@@ -1,4 +1,4 @@
-class PubliiMermaid {
+class MermaidSupport {
   constructor(API, name, config) {
     this.API = API;
     this.name = name;
@@ -36,11 +36,11 @@ class PubliiMermaid {
   addMermaidScripts(rendererInstance) {
     return `
       <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        import mermaid from '${rendererInstance.siteConfig.domain}/media/plugins/mermaidSupport/mermaid.esm.min.mjs';
         mermaid.initialize({ startOnLoad: true, theme: "${this.config.theme}" });
       </script>
     `;
   }
 }
 
-module.exports = PubliiMermaid;
+module.exports = MermaidSupport;

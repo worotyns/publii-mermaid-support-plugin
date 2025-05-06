@@ -1,4 +1,4 @@
-# Publii Mermaid Plugin
+# Mermaid Plugin
 
 Easily render [Mermaid.js](https://mermaid.js.org/) diagrams inside your Publii blog posts and pages using fenced code blocks. Perfect for visualizing flows, sequences, and other structured diagrams in Markdown.
 
