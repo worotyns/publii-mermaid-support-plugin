@@ -35,7 +35,7 @@ class MermaidSupport {
 
   addMermaidScripts(rendererInstance) {
     return `
-    <script src="${rendererInstance.siteConfig.domain}/media/plugins/mermaidSupport/mermaid.min.mjs"></script>
+    <script src="${rendererInstance.siteConfig.domain}/media/plugins/mermaidSupport/mermaid.min.js"></script>
     <script>
       mermaid.initialize({ startOnLoad: true, theme: "${this.config.theme}" });
     </script>
