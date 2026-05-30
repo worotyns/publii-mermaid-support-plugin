@@ -18,7 +18,7 @@ class MermaidSupport {
     }
 
     return styles;
-	}
+  }
 
   addModifiers() {
     this.API.addModifier('postText', this.replaceMermaidCodeBlocks, 1, this);
@@ -28,9 +28,17 @@ class MermaidSupport {
   }
 
   replaceMermaidCodeBlocks(rendererInstance, text) {
-    return text.replace(/<pre><code class="language-mermaid">([\s\S]*?)<\/code><\/pre>/g, (match, code) => {
-      return `<pre class="mermaid">${code}</pre>`;
+    text = text.replace(/<pre\b[^>]*>\s*<code\b[^>]*\blanguage-mermaid\b[^>]*>([\s\S]*?)<\/code>\s*<\/pre>/g, (match, code) => {
+      const plainCode = code.replace(/<[^>]+>/g, '').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+      return `<pre class="mermaid">${plainCode}</pre>`;
     });
+
+    text = text.replace(/<pre\b[^>]*\blanguage-mermaid\b[^>]*>([\s\S]*?)<\/pre>/g, (match, code) => {
+      const plainCode = code.replace(/<[^>]+>/g, '').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+      return `<pre class="mermaid">${plainCode}</pre>`;
+    });
+
+    return text;
   }
 
   addMermaidScripts(rendererInstance) {
